@@ -9,7 +9,7 @@ from torch_geometric.data import DataLoader
 from torch_geometric.datasets import TUDataset
 from torch_geometric.nn import GINConv, global_add_pool
 
-from BigGNNer.GNNExplainer.HuggingGNNExplainer import GNNExplainer
+from BigGNNer.GNNExplainer.GNNExplainerImpl import GNNExplainer
 
 
 class Net(torch.nn.Module):
@@ -63,7 +63,7 @@ class Net(torch.nn.Module):
 
 if __name__ == '__main__':
     # Load the dataset
-    dataset = TUDataset(root='../TUDataset', name='MUTAG').shuffle()
+    dataset = TUDataset(root='../../data_root/TUDataset', name='MUTAG').shuffle()
     test_dataset = dataset[:len(dataset) // 10]
     train_dataset = dataset[len(dataset) // 10:]
     test_loader = DataLoader(test_dataset, batch_size=128)

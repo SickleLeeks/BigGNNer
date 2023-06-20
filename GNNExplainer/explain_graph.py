@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 # Created by BIT09 at 2023/4/27
+import os
 import matplotlib.pyplot as plt
 import torch
 import torch.nn.functional as F
@@ -69,7 +70,7 @@ def Test(data_loader):
 
 if __name__ == '__main__':
     # Load the dataset
-    dataset = TUDataset(root='../TUDataset', name='MUTAG')
+    dataset = TUDataset(root='../../data_root/TUDataset', name='MUTAG')
     # print details about the graph
     print(f'Dataset: {dataset}:')
     print("Number of Graphs: ", len(dataset))

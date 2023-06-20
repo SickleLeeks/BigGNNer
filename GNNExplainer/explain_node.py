@@ -78,7 +78,7 @@ def Test(model, data, device):
 
 if __name__ == '__main__':
     # Load the Planetoid dataset
-    dataset = Planetoid(root='../', name='Pubmed')
+    dataset = Planetoid(root='../../data_root', name='Pubmed')
     data = dataset[0]
     # Set the device dynamically
     print(torch.cuda.is_available())
